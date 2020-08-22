@@ -1,0 +1,100 @@
+# Nmap 7.80 scan initiated Thu Aug 20 17:48:02 2020 as: nmap -sS -p- -Pn -vvv --reason --script=firewalk,http-enum,http-errors,http-robots.txt,http-waf-fingerprint,ip-forwarding,ntp-info,smb-enum-shares,smb-enum-users,smb-protocols,whois-ip,xmpp-info,vulners,default -A -T4 --stylesheet nmap.xsl -oA tcp_legacy 10.10.10.4
+Nmap scan report for 10.10.10.4
+Host is up, received user-set (0.036s latency).
+Scanned at 2020-08-20 17:48:02 UTC for 162s
+Not shown: 65532 filtered ports
+Reason: 65532 no-responses
+PORT     STATE  SERVICE       REASON          VERSION
+139/tcp  open   netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open   microsoft-ds  syn-ack ttl 127 Windows XP microsoft-ds
+3389/tcp closed ms-wbt-server reset ttl 127
+Device type: general purpose|specialized
+Running (JUST GUESSING): Microsoft Windows XP|2003|2000|2008 (94%), General Dynamics embedded (89%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_server_2003::sp1 cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_server_2008::sp2
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Microsoft Windows XP SP3 (94%), Microsoft Windows Server 2003 SP1 or SP2 (92%), Microsoft Windows XP (92%), Microsoft Windows 2003 SP2 (91%), Microsoft Windows 2000 SP4 (91%), Microsoft Windows Server 2003 SP2 (91%), Microsoft Windows Server 2003 (90%), Microsoft Windows XP SP2 or Windows Server 2003 (90%), Microsoft Windows XP Professional SP3 (90%), Microsoft Windows XP SP2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=8/20%OT=139%CT=3389%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F3EB7F4%P=x86_64-pc-linux-gnu)
+SEQ(SP=FF%GCD=1%ISR=10E%TI=I%CI=I%II=I%SS=S%TS=0)
+OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)
+WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)
+ECN(R=Y%DF=Y%TG=80%W=FAF0%O=M54DNW0NNS%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=N%TG=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=N)
+U1(R=N)
+IE(R=Y%DFI=S%TG=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: 5d00h27m39s, deviation: 2h07m16s, median: 4d22h57m39s
+| firewalk: 
+| HOP  HOST         PROTOCOL  BLOCKED PORTS
+| 0    10.10.14.23  tcp       8,10
+|_1    10.10.14.1   tcp       1-7,9
+| nbstat: NetBIOS name: LEGACY, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b9:0f:1d (VMware)
+| Names:
+|   LEGACY<00>           Flags: <unique><active>
+|   HTB<00>              Flags: <group><active>
+|   LEGACY<20>           Flags: <unique><active>
+|   HTB<1e>              Flags: <group><active>
+|   HTB<1d>              Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   00 50 56 b9 0f 1d 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 40600/tcp): CLEAN (Timeout)
+|   Check 2 (port 4419/tcp): CLEAN (Timeout)
+|   Check 3 (port 50902/udp): CLEAN (Timeout)
+|   Check 4 (port 13652/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-enum-shares: 
+|   note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)
+|   account_used: <blank>
+|   \\10.10.10.4\ADMIN$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: <none>
+|   \\10.10.10.4\C$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: <none>
+|   \\10.10.10.4\IPC$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|_    Anonymous access: READ
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: legacy
+|   NetBIOS computer name: LEGACY\x00
+|   Workgroup: HTB\x00
+|_  System time: 2020-08-25T22:47:22+03:00
+| smb-protocols: 
+|   dialects: 
+|_    NT LM 0.12 (SMBv1) [dangerous, but default]
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT      ADDRESS
+1   36.85 ms 10.10.14.1
+2   37.01 ms 10.10.10.4
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 20 17:50:44 2020 -- 1 IP address (1 host up) scanned in 162.53 seconds

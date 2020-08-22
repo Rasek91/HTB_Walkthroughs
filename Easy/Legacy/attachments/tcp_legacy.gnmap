@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Aug 20 17:48:02 2020 as: nmap -sS -p- -Pn -vvv --reason --script=firewalk,http-enum,http-errors,http-robots.txt,http-waf-fingerprint,ip-forwarding,ntp-info,smb-enum-shares,smb-enum-users,smb-protocols,whois-ip,xmpp-info,vulners,default -A -T4 --stylesheet nmap.xsl -oA tcp_legacy 10.10.10.4
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.4 ()	Status: Up
+Host: 10.10.10.4 ()	Ports: 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Windows XP microsoft-ds/, 3389/closed/tcp//ms-wbt-server///	Ignored State: filtered (65532)	Seq Index: 255	IP ID Seq: Incremental
+# Nmap done at Thu Aug 20 17:50:44 2020 -- 1 IP address (1 host up) scanned in 162.53 seconds

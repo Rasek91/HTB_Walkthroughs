@@ -1,0 +1,38 @@
+root@Kali:/# msfconsole
+
+ _                                                    _
+/ \    /\         __                         _   __  /_/ __
+| |\  / | _____   \ \           ___   _____ | | /  \ _   \ \
+| | \/| | | ___\ |- -|   /\    / __\ | -__/ | || | || | |- -|
+|_|   | | | _|__  | |_  / -\ __\ \   | |    | | \__/| |  | |_
+      |/  |____/  \___\/ /\ \\___/   \/     \__|    |_\  \___\
+
+
+       =[ metasploit v5.0.101-dev                         ]
++ -- --=[ 2048 exploits - 1105 auxiliary - 344 post       ]
++ -- --=[ 566 payloads - 45 encoders - 10 nops            ]
++ -- --=[ 7 evasion                                       ]
+
+Metasploit tip: Use the resource command to run commands from a file
+
+msf5 > use auxiliary/scanner/smb/smb_version
+msf5 auxiliary(scanner/smb/smb_version) > show options
+
+Module options (auxiliary/scanner/smb/smb_version):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   RHOSTS                      yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+   SMBDomain  .                no        The Windows domain to use for authentication
+   SMBPass                     no        The password for the specified username
+   SMBUser                     no        The username to authenticate as
+   THREADS    1                yes       The number of concurrent threads (max one per host)
+
+msf5 auxiliary(scanner/smb/smb_version) > set RHOSTS 10.10.10.3
+RHOSTS => 10.10.10.3
+msf5 auxiliary(scanner/smb/smb_version) > exploit
+
+[*] 10.10.10.3:445        - Host could not be identified: Unix (Samba 3.0.20-Debian)
+[*] 10.10.10.3:445        - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf5 auxiliary(scanner/smb/smb_version) >
