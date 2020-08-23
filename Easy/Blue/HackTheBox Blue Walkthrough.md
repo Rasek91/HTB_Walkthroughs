@@ -1,4 +1,4 @@
-# HackTheBox Lame Walkthrough
+# HackTheBox Blue Walkthrough
 
 This is a Walkthrough how I get the user and root flag on the machine. All my scan results are stored in the [attachments](./attachments) folder.
 
