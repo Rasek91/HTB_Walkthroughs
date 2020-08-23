@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Sat Aug 22 15:18:38 2020 as: nmap -sS -p- -Pn -vvv --reason --script=firewalk,http-enum,http-errors,http-robots.txt,http-waf-fingerprint,ip-forwarding,ntp-info,smb-enum-shares,smb-enum-users,smb-protocols,whois-ip,xmpp-info,vulners,default -A -T4 --stylesheet nmap.xsl -oA tcp_blue 10.10.10.40
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.40 ()	Status: Up
+Host: 10.10.10.40 ()	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)/, 49152/open/tcp//msrpc//Microsoft Windows RPC/, 49153/open/tcp//msrpc//Microsoft Windows RPC/, 49154/open/tcp//msrpc//Microsoft Windows RPC/, 49155/open/tcp//msrpc//Microsoft Windows RPC/, 49156/open/tcp//msrpc//Microsoft Windows RPC/, 49157/open/tcp//msrpc//Microsoft Windows RPC/	Ignored State: closed (65526)	Seq Index: 263	IP ID Seq: Incremental
+# Nmap done at Sat Aug 22 15:21:25 2020 -- 1 IP address (1 host up) scanned in 167.29 seconds

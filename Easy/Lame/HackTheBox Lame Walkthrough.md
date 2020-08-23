@@ -4,7 +4,7 @@ This is a Walkthrough how I get the user and root flag on the machine. All my sc
 
 achine details:
 
-- Machine Name : Lame
+- Machine Name: Lame
 - IP address: 10.10.10.3
 - OS: Linux
 - Difficulty: Easy
@@ -70,7 +70,7 @@ msf5 auxiliary(scanner/smb/smb_version) >
 
 ### Searching Vulnerabilities
 
-I google for [samba 3.0.20-debian exploit](https://www.google.com/search?q=samba+3.0.20-debian+exploit&oq=Samba+3.0.20-Debian&aqs=chrome.1.69i57j0l4.1529j0j9&sourceid=chrome&ie=UTF-8) and  for [vsftpd 2.3.4 exploit](https://www.google.com/search?q=vsftpd+2.3.4+exploit&oq=vsFTPd+2.3.4+&aqs=chrome.1.69i57j0l7.1471j0j7&sourceid=chrome&ie=UTF-8).
+I google for [samba 3.0.20-debian exploit](https://www.google.com/search?q=samba+3.0.20-debian+exploit&oq=Samba+3.0.20-Debian&aqs=chrome.1.69i57j0l4.1529j0j9&sourceid=chrome&ie=UTF-8) and for [vsftpd 2.3.4 exploit](https://www.google.com/search?q=vsftpd+2.3.4+exploit&oq=vsFTPd+2.3.4+&aqs=chrome.1.69i57j0l7.1471j0j7&sourceid=chrome&ie=UTF-8).
 
 I found the following vulnerabilities:
 - [exploit-smb-3.0.20.py](https://github.com/macha97/exploit-smb-3.0.20/blob/master/exploit-smb-3.0.20.py)

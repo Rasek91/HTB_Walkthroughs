@@ -4,7 +4,7 @@ This is a Walkthrough how I get the user and root flag on the machine. All my sc
 
 achine details:
 
-- Machine Name : Legacy
+- Machine Name: Legacy
 - IP address: 10.10.10.4
 - OS: Windows
 - Difficulty: Easy

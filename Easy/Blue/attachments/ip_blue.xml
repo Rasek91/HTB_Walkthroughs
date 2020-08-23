@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Aug 22 15:17:08 2020 as: nmap -sO -p- -Pn -vvv -&#45;reason -T4 -&#45;stylesheet nmap.xsl -oA ip_blue 10.10.10.40 -->
+<nmaprun scanner="nmap" args="nmap -sO -p- -Pn -vvv -&#45;reason -T4 -&#45;stylesheet nmap.xsl -oA ip_blue 10.10.10.40" start="1598109428" startstr="Sat Aug 22 15:17:08 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="ipproto" protocol="ip" numservices="256" services="0-255"/>
+<verbose level="3"/>
+<debugging level="0"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1598109428"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1598109428"/>
+<taskbegin task="IPProto Scan" time="1598109428"/>
+<taskend task="IPProto Scan" time="1598109450" extrainfo="256 total ports"/>
+<host starttime="1598109428" endtime="1598109450"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="181">
+<extrareasons reason="proto-unreaches" count="181"/>
+</extraports>
+<port protocol="ip" portid="1"><state state="open" reason="proto-unreach" reason_ttl="127"/>
+<service name="icmp" conf="8" method="table"/></port>
+<port protocol="ip" portid="2"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="igmp" conf="8" method="table"/></port>
+<port protocol="ip" portid="4"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ipv4" conf="8" method="table"/></port>
+<port protocol="ip" portid="6"><state state="open" reason="proto-response" reason_ttl="127"/>
+<service name="tcp" conf="8" method="table"/></port>
+<port protocol="ip" portid="12"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="pup" conf="8" method="table"/></port>
+<port protocol="ip" portid="16"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="chaos" conf="8" method="table"/></port>
+<port protocol="ip" portid="17"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="udp" conf="8" method="table"/></port>
+<port protocol="ip" portid="19"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="dcn-meas" conf="8" method="table"/></port>
+<port protocol="ip" portid="24"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="trunk-2" conf="8" method="table"/></port>
+<port protocol="ip" portid="27"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="rdp" conf="8" method="table"/></port>
+<port protocol="ip" portid="28"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="irtp" conf="8" method="table"/></port>
+<port protocol="ip" portid="32"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="merit-inp" conf="8" method="table"/></port>
+<port protocol="ip" portid="36"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="xtp" conf="8" method="table"/></port>
+<port protocol="ip" portid="41"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ipv6" conf="8" method="table"/></port>
+<port protocol="ip" portid="46"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="rsvp" conf="8" method="table"/></port>
+<port protocol="ip" portid="50"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="esp" conf="8" method="table"/></port>
+<port protocol="ip" portid="51"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ah" conf="8" method="table"/></port>
+<port protocol="ip" portid="52"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="i-nlsp" conf="8" method="table"/></port>
+<port protocol="ip" portid="55"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="mobile" conf="8" method="table"/></port>
+<port protocol="ip" portid="57"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="skip" conf="8" method="table"/></port>
+<port protocol="ip" portid="58"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ipv6-icmp" conf="8" method="table"/></port>
+<port protocol="ip" portid="64"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="sat-expak" conf="8" method="table"/></port>
+<port protocol="ip" portid="66"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="rvd" conf="8" method="table"/></port>
+<port protocol="ip" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="anydistribfs" conf="8" method="table"/></port>
+<port protocol="ip" portid="78"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="wb-mon" conf="8" method="table"/></port>
+<port protocol="ip" portid="79"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="wb-expak" conf="8" method="table"/></port>
+<port protocol="ip" portid="90"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="sprite-rpc" conf="8" method="table"/></port>
+<port protocol="ip" portid="97"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="etherip" conf="8" method="table"/></port>
+<port protocol="ip" portid="100"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="gmtp" conf="8" method="table"/></port>
+<port protocol="ip" portid="101"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ifmp" conf="8" method="table"/></port>
+<port protocol="ip" portid="103"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="pim" conf="8" method="table"/></port>
+<port protocol="ip" portid="104"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="aris" conf="8" method="table"/></port>
+<port protocol="ip" portid="106"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="qnx" conf="8" method="table"/></port>
+<port protocol="ip" portid="109"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="snp" conf="8" method="table"/></port>
+<port protocol="ip" portid="111"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ipx-in-ip" conf="8" method="table"/></port>
+<port protocol="ip" portid="118"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="stp" conf="8" method="table"/></port>
+<port protocol="ip" portid="119"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="srp" conf="8" method="table"/></port>
+<port protocol="ip" portid="123"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="ptp" conf="8" method="table"/></port>
+<port protocol="ip" portid="124"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="isis-ipv4" conf="8" method="table"/></port>
+<port protocol="ip" portid="136"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="udplite" conf="8" method="table"/></port>
+<port protocol="ip" portid="137"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="mpls-in-ip" conf="8" method="table"/></port>
+<port protocol="ip" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="manet" conf="8" method="table"/></port>
+<port protocol="ip" portid="139"><state state="open|filtered" reason="no-response" reason_ttl="0"/>
+<service name="hip" conf="8" method="table"/></port>
+<port protocol="ip" portid="153"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="155"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="157"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="160"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="169"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="170"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="171"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="172"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="176"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="184"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="194"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="195"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="197"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="198"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="200"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="202"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="210"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="211"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="217"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="218"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="219"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="221"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="224"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="227"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="233"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="238"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="240"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="241"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="244"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="246"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="247"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+<port protocol="ip" portid="251"><state state="open|filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<times srtt="34465" rttvar="1250" to="100000"/>
+</host>
+<runstats><finished time="1598109450" timestr="Sat Aug 22 15:17:30 2020" elapsed="22.68" summary="Nmap done at Sat Aug 22 15:17:30 2020; 1 IP address (1 host up) scanned in 22.68 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

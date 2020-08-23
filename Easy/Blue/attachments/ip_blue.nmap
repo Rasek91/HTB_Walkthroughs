@@ -1,0 +1,85 @@
+# Nmap 7.80 scan initiated Sat Aug 22 15:17:08 2020 as: nmap -sO -p- -Pn -vvv --reason -T4 --stylesheet nmap.xsl -oA ip_blue 10.10.10.40
+Nmap scan report for 10.10.10.40
+Host is up, received user-set (0.034s latency).
+Scanned at 2020-08-22 15:17:08 UTC for 22s
+Not shown: 181 closed protocols
+Reason: 181 proto-unreaches
+PROTOCOL STATE         SERVICE      REASON
+1        open          icmp         proto-unreach ttl 127
+2        open|filtered igmp         no-response
+4        open|filtered ipv4         no-response
+6        open          tcp          proto-response ttl 127
+12       open|filtered pup          no-response
+16       open|filtered chaos        no-response
+17       open|filtered udp          no-response
+19       open|filtered dcn-meas     no-response
+24       open|filtered trunk-2      no-response
+27       open|filtered rdp          no-response
+28       open|filtered irtp         no-response
+32       open|filtered merit-inp    no-response
+36       open|filtered xtp          no-response
+41       open|filtered ipv6         no-response
+46       open|filtered rsvp         no-response
+50       open|filtered esp          no-response
+51       open|filtered ah           no-response
+52       open|filtered i-nlsp       no-response
+55       open|filtered mobile       no-response
+57       open|filtered skip         no-response
+58       open|filtered ipv6-icmp    no-response
+64       open|filtered sat-expak    no-response
+66       open|filtered rvd          no-response
+68       open|filtered anydistribfs no-response
+78       open|filtered wb-mon       no-response
+79       open|filtered wb-expak     no-response
+90       open|filtered sprite-rpc   no-response
+97       open|filtered etherip      no-response
+100      open|filtered gmtp         no-response
+101      open|filtered ifmp         no-response
+103      open|filtered pim          no-response
+104      open|filtered aris         no-response
+106      open|filtered qnx          no-response
+109      open|filtered snp          no-response
+111      open|filtered ipx-in-ip    no-response
+118      open|filtered stp          no-response
+119      open|filtered srp          no-response
+123      open|filtered ptp          no-response
+124      open|filtered isis-ipv4    no-response
+136      open|filtered udplite      no-response
+137      open|filtered mpls-in-ip   no-response
+138      open|filtered manet        no-response
+139      open|filtered hip          no-response
+153      open|filtered unknown      no-response
+155      open|filtered unknown      no-response
+157      open|filtered unknown      no-response
+160      open|filtered unknown      no-response
+169      open|filtered unknown      no-response
+170      open|filtered unknown      no-response
+171      open|filtered unknown      no-response
+172      open|filtered unknown      no-response
+176      open|filtered unknown      no-response
+184      open|filtered unknown      no-response
+194      open|filtered unknown      no-response
+195      open|filtered unknown      no-response
+197      open|filtered unknown      no-response
+198      open|filtered unknown      no-response
+200      open|filtered unknown      no-response
+202      open|filtered unknown      no-response
+210      open|filtered unknown      no-response
+211      open|filtered unknown      no-response
+217      open|filtered unknown      no-response
+218      open|filtered unknown      no-response
+219      open|filtered unknown      no-response
+221      open|filtered unknown      no-response
+224      open|filtered unknown      no-response
+227      open|filtered unknown      no-response
+233      open|filtered unknown      no-response
+238      open|filtered unknown      no-response
+240      open|filtered unknown      no-response
+241      open|filtered unknown      no-response
+244      open|filtered unknown      no-response
+246      open|filtered unknown      no-response
+247      open|filtered unknown      no-response
+251      open|filtered unknown      no-response
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Aug 22 15:17:30 2020 -- 1 IP address (1 host up) scanned in 22.68 seconds

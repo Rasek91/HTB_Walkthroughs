@@ -1,0 +1,40 @@
+# Nmap 7.80 scan initiated Sat Aug 22 15:23:23 2020 as: nmap -sU -Pn -vvv --reason --script=firewalk,http-enum,http-errors,http-robots.txt,http-waf-fingerprint,ip-forwarding,ntp-info,smb-enum-shares,smb-enum-users,smb-protocols,whois-ip,xmpp-info,vulners,default -A -T4 --stylesheet nmap.xsl -oA udp_blue 10.10.10.40
+Increasing send delay for 10.10.10.40 from 0 to 50 due to 91 out of 227 dropped probes since last increase.
+Nmap scan report for 10.10.10.40
+Host is up, received user-set (0.035s latency).
+Scanned at 2020-08-22 15:23:24 UTC for 233s
+Not shown: 994 closed ports
+Reason: 994 port-unreaches
+PORT     STATE         SERVICE     REASON      VERSION
+123/udp  open|filtered ntp         no-response
+137/udp  open|filtered netbios-ns  no-response
+138/udp  open|filtered netbios-dgm no-response
+500/udp  open|filtered isakmp      no-response
+|_ike-version: ERROR: Script execution failed (use -d to debug)
+4500/udp open|filtered nat-t-ike   no-response
+5355/udp open|filtered llmnr       no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=8/22%OT=%CT=%CU=2%PV=Y%DS=2%DC=T%G=N%TM=5F413955%P=x86_64-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+
+Host script results:
+| firewalk: 
+| HOP  HOST        PROTOCOL  BLOCKED PORTS
+|_1    10.10.14.1  udp       123,137-138,500,4500,5355
+
+TRACEROUTE (using port 17006/udp)
+HOP RTT      ADDRESS
+1   35.53 ms 10.10.14.1
+2   33.13 ms 10.10.10.40
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 22 15:27:17 2020 -- 1 IP address (1 host up) scanned in 234.61 seconds
